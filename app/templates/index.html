@@ -7,9 +7,10 @@
     <title>Flask Note</title>
 </head>
 <body>
+    <h1>Entries<h1>
     {% for entry in entries %}
     <div>
-        <h1>{{ entry.title }}</h1>
+        <h2>{{ entry.title }}</h2>
         <p>
             {{ entry.body }}
         </p>
