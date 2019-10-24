@@ -19,9 +19,9 @@
 
                 {% for entry in entries %}
                 <div class="section">
-                    <p class="title">{{ entry.title }}</p>
+                    <p class="title">{{ entry.title | safe }}</p>
                     <p>
-                        {{ entry.body }}
+                        {{ entry.body | safe }}
                     </p>
                 </div>
                 {% endfor %}
