@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <title>{% block title %}Home{% endblock %} | Flasknote</title>
+</head>
+<body>
+    {% block navbar %}
+    <div class="navbar is-light" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="{{ url_for('main.index') }}">
+                    <span class="title">FlaskNote</span>
+                </a>
+            </div>
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a href="{{ url_for('main.index') }}" class="navbar-item">Home</a>
+                </div>
+            </div>
+            <div class="navbar-end"></div>
+        </div>
+    </div>
+    {% endblock %}
+    {% block content %}
+    {% endblock %}
+    </body>
+</html>
