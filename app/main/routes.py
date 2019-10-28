@@ -18,4 +18,10 @@ def index():
         db.session.commit()
         return redirect(url_for('main.index'))
 
-    return render_template('index.html', form=EntryForm(), entries=entries)
+    return render_template('main/index.html', form=EntryForm(), entries=entries)
+
+
+@bp.route('/fortune', methods=['GET'])
+def fortune():
+    date =
+    return render_template('main/fortune.html')

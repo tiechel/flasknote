@@ -3,11 +3,12 @@ from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 from config import Config
 from flask_migrate import Migrate
-from app.models import db, Entry
+from app.models import db, Entry, Fortune
 
 migrate = Migrate()
 admin = Admin(name='flasknote', template_mode='bootstrap3')
 admin.add_view(ModelView(Entry, db.session))
+admin.add_view(ModelView(Fortune, db.session))
 
 
 def create_app(config_class=Config):
