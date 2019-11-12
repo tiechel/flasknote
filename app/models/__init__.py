@@ -28,3 +28,6 @@ class Fortune(db.Model):
     love = db.Column(db.Integer, nullable=False)
     total = db.Column(db.Integer, nullable=False)
     color = db.Column(db.String(), nullable=False)
+
+    def __repr__(self):
+        return '<Fortune {}>'.format(id)
