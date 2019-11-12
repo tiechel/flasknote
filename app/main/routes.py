@@ -23,5 +23,5 @@ def index():
 
 @bp.route('/fortune', methods=['GET'])
 def fortune():
-    date =
+    # date =
     return render_template('main/fortune.html')
